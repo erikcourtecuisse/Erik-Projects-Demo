@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="DonjonDePapier" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/DonjonDePapier" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="sfml-graphics-s-d" />
+					<Add library="sfml-window-s-d" />
+					<Add library="sfml-system-s-d" />
+					<Add library="sfml-main-d" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/DonjonDePapier" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="sfml-graphics-s" />
+					<Add library="sfml-window-s" />
+					<Add library="sfml-system-s" />
+					<Add library="sfml-main" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DSFML_STATIC" />
+			<Add option="-Wall" />
+			<Add directory="C:/Program Files (x86)/CodeBlocks/SFML-2.4.2/include" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add directory="C:/Program Files (x86)/CodeBlocks/SFML-2.4.2/lib" />
+		</Linker>
+		<Unit filename="FontPolices/BadMofo.ttf" />
+		<Unit filename="FontPolices/Sketch College.ttf" />
+		<Unit filename="FontPolices/arial.ttf" />
+		<Unit filename="Musics&amp;Sounds/MenuOriginal.wav" />
+		<Unit filename="Musics&amp;Sounds/MusicMenuMusicWav.wav" />
+		<Unit filename="Musics&amp;Sounds/MusicMenuVocalWav.wav" />
+		<Unit filename="Sprites&amp;Textures/Actor5.png" />
+		<Unit filename="Sprites&amp;Textures/IntroBackGround.png" />
+		<Unit filename="Sprites&amp;Textures/MenuBackGround.jpg" />
+		<Unit filename="Sprites&amp;Textures/Mur1.png" />
+		<Unit filename="Sprites&amp;Textures/Sol2.jpg" />
+		<Unit filename="include/Character.h" />
+		<Unit filename="include/FightSystem.h" />
+		<Unit filename="include/Game.h" />
+		<Unit filename="include/Hero.h" />
+		<Unit filename="include/Intro.h" />
+		<Unit filename="include/Item.h" />
+		<Unit filename="include/Labyrinthe.h" />
+		<Unit filename="include/Monstre.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Character.cpp" />
+		<Unit filename="src/FightSystem.cpp" />
+		<Unit filename="src/Game.cpp" />
+		<Unit filename="src/Hero.cpp" />
+		<Unit filename="src/Intro.cpp" />
+		<Unit filename="src/Item.cpp" />
+		<Unit filename="src/Labyrinthe.cpp" />
+		<Unit filename="src/Monstre.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

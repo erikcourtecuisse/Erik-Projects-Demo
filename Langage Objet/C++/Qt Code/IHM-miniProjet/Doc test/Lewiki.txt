@@ -1,0 +1,5 @@
+Le wiki :
+Un wiki est une application web qui permet la création, 
+la modification et l'illustration collaboratives de pages à l'intérieur d'un site web. 
+Il utilise un langage de balisage et son contenu est modifiable au moyen d’un navigateur web. 
+C'est un logiciel de gestion de contenu, dont la structure implicite est minimale, tandis que la structure explicite émerge en fonction des besoins des usagers.o

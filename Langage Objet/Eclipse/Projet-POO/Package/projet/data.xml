@@ -1,0 +1,169 @@
+<data>
+	<zone>
+		<item id="0" name="Gare Routiere A1" posX="100" posY="50"></item>
+		<item id="1" name="Arret BUS A1" posX="100" posY="200"></item>
+		<item id="2" name="Arret BUS A2" posX="100" posY="350"></item>
+		<item id="3" name="Arret BUS A3" posX="100" posY="500"></item>
+		<item id="4" name="Arret BUS A4" posX="200" posY="600"></item>
+		<item id="5" name="Arret BUS A5" posX="350" posY="600"></item>
+		<item id="6" name="Arret BUS A6" posX="500" posY="600"></item>
+		<item id="7" name="Arret BUS A7" posX="650" posY="600"></item>
+		<item id="8" name="Arret BUS A8" posX="800" posY="500"></item>
+		<item id="9" name="Arret BUS A9" posX="800" posY="350"></item>
+		<item id="10" name="Arret BUS A10" posX="800" posY="200"></item>
+		<item id="11" name="Arret BUS A11" posX="700" posY="50"></item>
+		<item id="12" name="Arret BUS A12" posX="550" posY="50"></item>
+		<item id="13" name="Arret BUS A13" posX="400" posY="50"></item>
+		<item id="14" name="Gare Routiere A2" posX="250" posY="50"></item>
+
+		<item id="15" name="Arrive TRAM B1" posX="850" posY="100"></item>
+		<item id="16" name="Arret TRAM B1" posX="675" posY="200"></item>
+		<item id="17" name="Arret TRAM B2" posX="550" posY="275"></item>
+		<item id="18" name="Arret TRAM B3" posX="550" posY="400"></item>
+		<item id="19" name="Arret TRAM B4" posX="350" posY="400"></item>
+		<item id="20" name="Arrive TRAM B2" posX="200" posY="400"></item>
+
+		<item id="21" name="Arrive TRAM A1" posX="350" posY="300"></item>
+		<item id="22" name="Arret TRAM A1" posX="350" posY="150"></item>
+		<item id="23" name="Arret TRAM A2" posX="500" posY="175"></item>
+		<item id="24" name="Arret TRAM A3" posX="675" posY="350"></item>
+		<item id="25" name="Arret TRAM A4" posX="650" posY="500"></item>
+		<item id="26" name="Arret TRAM A5" posX="500" posY="500"></item>
+		<item id="27" name="Arrive TRAM A2" posX="300" posY="500"></item>
+
+		<item id="28" name="Grande Gare TER" posX="225" posY="250"></item>
+		<item id="29" name="Sortie" posX="200" posY="-100"></item>
+	</zone>
+	<types>
+		<item id="0" name="Bus" nombrePersonneMaxParTransport="40"></item>
+		<item id="1" name="Tramway" nombrePersonneMaxParTransport="150"></item>
+		<item id="2" name="TER" nombrePersonneMaxParTransport="650"></item>
+	</types>
+	<line>
+		<item id="0" name="Bus 1" type="1" r="0" g="255" b="0" freq="11000">
+			<item id="0" />
+			<item id="1" />
+			<item id="2" />
+			<item id="3" />
+			<item id="4" />
+			<item id="5" />
+			<item id="6" />
+			<item id="7" />
+			<item id="8" />
+			<item id="9" />
+			<item id="10" />
+			<item id="11" />
+			<item id="12" />
+			<item id="13" />
+			<item id="14" />
+		</item>
+		<item id="1" name="Bus 2" type="1" r="0" g="255" b="0" freq="7000">
+			<item id="14" />
+			<item id="13" />
+			<item id="12" />
+			<item id="11" />
+			<item id="10" />
+			<item id="9" />
+			<item id="8" />
+			<item id="7" />
+			<item id="6" />
+			<item id="5" />
+			<item id="4" />
+			<item id="3" />
+			<item id="2" />
+			<item id="1" />
+			<item id="0" />
+		</item>
+		<item id="2" name="Tramway 1" type="0" r="215" g="67" b="161" freq="4000">
+			<item id="15" />
+			<item id="16" />
+			<item id="17" />
+			<item id="18" />
+			<item id="19" />
+			<item id="20" />
+		</item>
+		<item id="3" name="Tramway 2" type="0" r="215" g="67" b="161" freq="8000">
+			<item id="20" />
+			<item id="19" />
+			<item id="18" />
+			<item id="17" />
+			<item id="16" />
+			<item id="15" />
+		</item>
+		<item id="4" name="Tramway 4" type="0" r="215" g="67" b="161" freq="10000">
+			<item id="21" />
+			<item id="22" />
+			<item id="23" />
+			<item id="17" />
+			<item id="24" />
+			<item id="25" />
+			<item id="26" />
+			<item id="27" />
+		</item>
+		<item id="5" name="Tramway 5" type="0" r="215" g="67" b="161" freq="7000">
+			<item id="27" />
+			<item id="26" />
+			<item id="25" />
+			<item id="24" />
+			<item id="17" />
+			<item id="23" />
+			<item id="22" />
+			<item id="21" />
+		</item>
+		<item id="6" name="TER" type="2" r="0" g="0" b="255" freq="9000">
+			<item id="28" />
+			<item id="29" />
+		</item>
+	</line>
+	<stop>
+		<item id="0" name="Gare Routiere A1" zone="0" type="1"/>
+		<item id="1" name="Arret BUS A1" zone="1" type="1"/>
+		<item id="2" name="Arret BUS A2" zone="2" type="1"/>
+		<item id="3" name="Arret BUS A3" zone="3" type="1"/>
+		<item id="4" name="Arret BUS A4" zone="4" type="1"/>
+		<item id="5" name="Arret BUS A5" zone="5" type="1"/>
+		<item id="6" name="Arret BUS A6" zone="6" type="1"/>
+		<item id="7" name="Arret BUS A7" zone="7" type="1"/>
+		<item id="8" name="Arret BUS A8" zone="8" type="1"/>
+		<item id="9" name="Arret BUS A9" zone="9" type="1"/>
+		<item id="10" name="Arret BUS A10" zone="10" type="1"/>
+		<item id="11" name="Arret BUS A11" zone="11" type="1"/>
+		<item id="12" name="Arret BUS A12" zone="12" type="1"/>
+		<item id="13" name="Arret BUS A13" zone="13" type="1"/>
+		<item id="14" name="Gare Routiere A2" zone="14" type="1"/>
+
+		<item id="15" name="Arrive TRAM B1" zone="15" type="0"/>
+		<item id="16" name="Arret TRAM B1" zone="16" type="0"/>
+		<item id="17" name="Arret TRAM B2" zone="17" type="0"/>
+		<item id="18" name="Arret TRAM B3" zone="18" type="0"/>
+		<item id="19" name="Arret TRAM B4" zone="19" type="0"/>
+		<item id="20" name="Arrive TRAM B2" zone="20" type="0"/>
+
+		<item id="21" name="Arrive TRAM A1" zone="21" type="0"/>
+		<item id="22" name="Arret TRAM A1" zone="22" type="0"/>
+		<item id="23" name="Arret TRAM A2" zone="23" type="0"/>
+		<item id="24" name="Arret TRAM A3" zone="24" type="0"/>
+		<item id="25" name="Arret TRAM A4" zone="25" type="0"/>
+		<item id="26" name="Arret TRAM A5" zone="26" type="0"/>
+		<item id="27" name="Arrive TRAM A2" zone="27" type="0"/>
+
+		<item id="28" name="Grande Gare TER" zone="28" type="2"/>
+		<item id="29" name="Sortie" zone="29" type="2"/>
+	</stop>
+	<config>
+		<mapX>1000</mapX>
+		<mapY>700</mapY>
+	</config>
+	<contraintes>
+		<item id="0" zone="28" name="Sortie de travail" heureDebut="400" heureFin="57600" nombreVisiteur="500"/>
+		<item id="1" zone="2" name="Sortie de travail" heureDebut="400" heureFin="57600" nombreVisiteur="50"/>
+		<item id="2" zone="5" name="Sortie de travail" heureDebut="400" heureFin="57600" nombreVisiteur="50"/>
+		<item id="3" zone="8" name="Sortie de travail" heureDebut="400" heureFin="57600" nombreVisiteur="50"/>
+		<item id="4" zone="17" name="Sortie de travail" heureDebut="400" heureFin="57600" nombreVisiteur="500"/>
+		<item id="5" zone="28" name="Vacances" heureDebut="24000" heureFin="576000" nombreVisiteur="50"/>
+		<item id="6" zone="12" name="Broquante" heureDebut="24000" heureFin="576000" nombreVisiteur="50"/>
+		<item id="7" zone="14" name="Sortie ecole" heureDebut="24000" heureFin="576000" nombreVisiteur="50"/>
+		<item id="8" zone="19" name="Sortie ecole" heureDebut="24000" heureFin="576000" nombreVisiteur="50"/>
+		<item id="9" zone="20" name="Sortie ecole" heureDebut="24000" heureFin="576000" nombreVisiteur="50"/>
+	</contraintes>
+</data>
