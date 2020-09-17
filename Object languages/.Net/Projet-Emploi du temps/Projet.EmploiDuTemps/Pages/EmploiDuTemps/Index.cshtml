@@ -1,0 +1,101 @@
+﻿@page
+@model Projet.EmploiDuTemps.Pages.Seances.EmploiDuTemps.IndexModel
+@using System.Globalization
+@using Models
+@{
+    ViewData["Title"] = "Emploi du Temps";
+}
+
+<style type="text/css">
+    caption  {
+        margin: auto;
+        font-family: Arial, Times, "Times New Roman", serif;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #009900;
+        margin-bottom: 20px;
+    }
+
+    table {
+        margin: auto;
+        border: 4px outset black;
+        border-collapse: collapse;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    th {
+        background-color: #006600;
+        color: white;
+        font-size: 1.1em;
+        font-family: Arial, "Arial Black", Times, "Times New Roman", serif;
+        border: 1px solid red;
+    }
+
+    td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    .tdHeader {
+        text-align: center;
+    }
+</style>
+
+<h2>Emploi du Temps</h2>
+
+<p>
+    Semaine N° :
+</p>
+<form method="post">
+    <div class="form-group">
+        <input asp-for="NumeroSemaine" class="form-control" type="number" value="@ViewBag.Semaine" />
+    </div>
+    <div class="form-group" style="margin-top:5px">
+        <button asp-page-handler="show">Afficher l'emploi du temps</button>
+    </div>
+    <div>
+
+        <button asp-page-handler="prev" asp-route-date="@Model.NumeroSemaine"><</button>
+        <button asp-page-handler="today" asp-route-date="@Model.NumeroSemaine">Aujourd'hui</button>
+        <button asp-page-handler="next" asp-route-date="@Model.NumeroSemaine">></button>
+    </div>
+</form>
+
+        <div>
+            @foreach (DateTime jour in ViewBag.JoursSemaine)
+            {
+                <table>
+                    <tr style="background: #8b8080; color: white;">
+                        <td class="tdHeader">
+                            @DateTimeFormatInfo.CurrentInfo.GetDayName(jour.DayOfWeek) <br />
+                            @jour.ToString("d")
+                        </td>
+                    </tr>
+                    @foreach (Seance seance in ViewBag.Seances)
+                    {
+                        @if (seance.Jour.ToString("d") == jour.ToString("d"))
+                        {
+                            String heureDebut = TimeSpan.FromHours(seance.HeureDebut).ToString("hh':'mm");
+                            String heureDeFin = TimeSpan.FromHours(seance.HeureDebut + seance.Duree).ToString("hh':'mm");
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li><strong>Heure de début :</strong>@heureDebut </li>
+                                        <li><strong>Durée :</strong> @seance.Duree heures</li>
+                                        <li><strong>Heure de fin :</strong> @heureDeFin</li>
+                                        <li><strong>Type :</strong> @seance.TypeSeance.Intitule</li>
+                                        <li><strong>Groupe :</strong> @seance.Enseignement.Groupe.NomGroupe</li>
+                                        <li><strong>UE :</strong> @seance.Enseignement.UE.NomComplet</li>
+                                        <li><strong>Enseignant :</strong> @seance.Enseignant.NomComplet</li>
+                                        <li><strong>Salle :</strong> @seance.Salle.NomSalle</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </table>
+            }
+        </div>
+
+

@@ -1,0 +1,73 @@
+﻿@page
+@model Projet.EmploiDuTemps.Pages.Seances.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Seance</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Seance.Jour)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seance.Jour)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seance.HeureDebut)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seance.HeureDebut)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seance.Duree)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seance.Duree)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seance.TypeSeanceID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seance.TypeSeanceID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seance.SalleID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seance.SalleID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seance.EnseignementID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seance.EnseignementID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seance.EnseignantID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seance.EnseignantID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seance.Remarque)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seance.Remarque)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seance.NumeroSemaine)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seance.NumeroSemaine)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Seance.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

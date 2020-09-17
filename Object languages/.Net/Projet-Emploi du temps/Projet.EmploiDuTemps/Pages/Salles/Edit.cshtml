@@ -1,0 +1,39 @@
+﻿@page
+@model Projet.EmploiDuTemps.Pages.Salles.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Salle</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Salle.ID" />
+            <div class="form-group">
+                <label asp-for="Salle.NomSalle" class="control-label"></label>
+                <input asp-for="Salle.NomSalle" class="form-control" />
+                <span asp-validation-for="Salle.NomSalle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salle.BatimentID" class="control-label"></label>
+                <select asp-for="Salle.BatimentID" class="form-control" asp-items="ViewBag.BatimentID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

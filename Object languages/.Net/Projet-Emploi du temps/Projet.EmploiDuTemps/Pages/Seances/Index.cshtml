@@ -1,0 +1,84 @@
+﻿@page
+@model Projet.EmploiDuTemps.Pages.Seances.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].Jour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].HeureDebut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].Duree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].TypeSeanceID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].SalleID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].EnseignementID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].EnseignantID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].Remarque)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].NumeroSemaine)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Seance) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeureDebut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeSeanceID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalleID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnseignementID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnseignantID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroSemaine)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
