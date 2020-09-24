@@ -1,0 +1,51 @@
+body
+{
+	background-image: url("../Images/background.jpg");
+}
+    
+a
+{
+    text-decoration: none;
+    color: black;
+    border: none;
+}
+
+h1
+{
+	width:400px;
+	text-align: center;
+	border: 2px groove;
+	border-radius: 10px;
+	background-image:url("../Images/background.png");
+}
+
+#Page
+{
+    top: -40px;
+    position: relative;
+    font-family: Verdana, sans-serif; 
+    width: 550px;
+    padding: 10px 15px;
+    border: 5px blue groove;
+    border-radius: 15px;
+    box-shadow: 6px 6px 6px grey;
+    text-align: center;
+    background-image:url("../Images/background.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+TEXTAREA
+{
+    resize:none;
+}
+
+#Panier
+{
+    left: 78%;
+    top: -45px;
+    position: relative;
+    width: 100px; 
+    height: 50px
+
+}

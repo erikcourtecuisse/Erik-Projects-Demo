@@ -1,0 +1,114 @@
+#Menuh, #Menuh ul{
+padding:0;
+margin:0;
+list-style:none;
+text-align:center;
+}
+#Menuh li{
+display:inline-block;
+position:relative;
+border-radius:8px 8px 0 0;
+}
+#Menuh ul li{
+display:inherit;
+border-radius:0;
+}
+#Menuh ul li:hover{
+border-radius:0;
+}
+#Menuh ul li:last-child{
+border-radius:0 0 8px 8px;
+}
+#Menuh ul{
+position:absolute;
+z-index: 1000;
+max-height:0;
+left: 0;
+right: 0;
+overflow:hidden;
+-moz-transition: .8s all .3s;
+-webkit-transition: .8s all .3s;
+transition: .8s all .3s;
+}
+#Menuh li:hover ul{
+max-height:15em;
+}
+/* background des liens menus */
+#Menuh li:first-child{
+background-color: #000000;
+background-image:-webkit-linear-gradient(top, #505050 0%, #000000 100%);
+background-image:linear-gradient(to bottom, #505050 0%, #000000 100%);
+}
+#Menuh li:nth-child(2){
+background-color: #000000;
+background-image: -webkit-linear-gradient(top, #505050 0%, #000000 100%);
+background-image:linear-gradient(to bottom, #505050 0%, #000000 100%);
+}
+#Menuh li:nth-child(3){
+background-color: #000000;
+background-image:-webkit-linear-gradient(top, #505050 0%, #000000 100%);
+background-image:linear-gradient(to bottom, #505050 0%, #000000 100%);
+}
+#Menuh li:nth-child(4){
+background-color: #000000;
+background-image:-webkit-linear-gradient(top, #505050 0%, #000000 100%);
+background-image:linear-gradient(to bottom, #505050 0%, #000000 100%);
+}
+#Menuh li:nth-child(5){
+background-color: #000000;
+background-image:-webkit-linear-gradient(top, #505050 0%, #000000 100%);
+background-image:linear-gradient(to bottom, #505050 0%, #000000 100%);
+}
+
+/* background des liens sous menus */
+#Menuh li:first-child li{
+background:#000000;
+}
+#Menuh li:nth-child(2) li{
+background:#000000;
+}
+#Menuh li:nth-child(3) li{
+background:#000000;
+}
+#Menuh li:nth-child(4) li{
+background:#000000;
+}
+#Menuh li:nth-child(5) li{
+background:#000000;
+}
+
+/* background des liens menus et sous menus au survol */
+#Menuh li:first-child:hover, #Menuh li:first-child li:hover{
+background:#505050;
+}
+#Menuh li:nth-child(2):hover, #Menuh li:nth-child(2) li:hover{
+background:#505050;
+}
+#Menuh li:nth-child(3):hover, #Menuh li:nth-child(3) li:hover{
+background:#505050;
+}
+#Menuh li:nth-child(4):hover, #Menuh li:nth-child(4) li:hover{
+background:#505050;
+}
+#Menuh li:nth-child(5):hover, #Menuh li:nth-child(5) li:hover{
+background:#505050;
+}
+
+/* les a href */
+#Menuh a{
+text-decoration:none;
+display:block;
+padding:8px 32px;
+color:#fff;
+font-family:arial;
+}
+#Menuh ul a{
+padding:8px 0;
+}
+#Menuh li:hover li a{
+color:#fff;
+text-transform:inherit;
+}
+#Menuh li:hover a, #Menuh li li:hover a{
+color:#000;
+}
